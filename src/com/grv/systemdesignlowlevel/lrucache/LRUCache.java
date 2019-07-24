@@ -5,6 +5,10 @@ import java.util.Map;
 
 public class LRUCache {
 
+    /**
+     * for simplicity the key is integer and value in cache is also an integer.
+     * In real time this is a string to string/object mapping mappo
+     */
     private Map<Integer, DoublyLL> refMap;
 
     private  DoublyLL cache;
@@ -67,7 +71,6 @@ public class LRUCache {
         this.last = last;
     }
 
-
     // O(1)
     public void refer(Integer x) {
 
@@ -114,6 +117,11 @@ public class LRUCache {
             cache = null;
             currentSize = 0;
         }
+    }
+
+    // O(1)
+    public Integer fetch(Integer x) {
+        return refMap.containsKey(x) ? refMap.get(x).getData() : null;
     }
 
 }
