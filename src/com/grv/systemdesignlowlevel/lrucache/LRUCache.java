@@ -6,8 +6,8 @@ import java.util.Map;
 public class LRUCache {
 
     /**
-     * for simplicity the key is integer and value in cache is also an integer.
-     * In real time this is a string to string/object mapping mappo
+     * For simplicity the key is integer and value in cache is also an integer.
+     * In real time this is a string to string/object mapping.
      */
     private Map<Integer, DoublyLL> refMap;
 
