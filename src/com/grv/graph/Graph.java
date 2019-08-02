@@ -35,6 +35,7 @@ public class Graph {
 		this.adj = adj;
 	}
 
+	//from v to w
 	public void addEdge(int v, int w) {
 		this.adj[v].add(w);
 	}
