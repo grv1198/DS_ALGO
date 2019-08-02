@@ -37,7 +37,6 @@ public class CycleInADirectedGraph {
     }
 
 
-
     public  static boolean isCyclic(Graph g){
 
         boolean visited[] = new boolean[g.getV()];
