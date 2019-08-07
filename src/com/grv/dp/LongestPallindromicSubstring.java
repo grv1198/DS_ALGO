@@ -16,14 +16,10 @@ public class LongestPallindromicSubstring {
 
         for (int i = 1; i < len; i++) {
 
-
             low = i-1;
             high = i;
 
-
             while ( low >=0 && high < len && s.charAt(low) == s.charAt(high)) {
-
-
 
                 if (high - low +1 > maxPLength) {
                     start = low;
@@ -34,10 +30,8 @@ public class LongestPallindromicSubstring {
                 high ++;
             }
 
-
             low = i-1;
             high = i+1;
-
 
             while ( low >=0 && high < len && s.charAt(low) == s.charAt(high)) {
 
