@@ -45,14 +45,12 @@ public class IslandInAMatrix {
      public static int countIslands(int[][] m, int r, int c){
 
          int count =0;
-        ROW = r;
-        COL = c;
+         ROW = r;
+         COL = c;
 
          boolean[][] visited = new boolean[r][c];
          for (int i = 0; i< r; i++){
              for (int j = 0; j < c; j++) {
-
-
                  if (m[i][j] == 1 && !visited[i][j]) {
                      dfs(m, i, j, visited);
                      count++;
