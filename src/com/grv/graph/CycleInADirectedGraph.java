@@ -5,8 +5,6 @@ import java.util.Iterator;
 
 public class CycleInADirectedGraph {
 
-
-
     public  static boolean isCyclicUtil(Integer v, boolean[] visited, boolean[] recStackVisited, Graph g) {
 
         if (recStackVisited[v]) {
@@ -30,10 +28,8 @@ public class CycleInADirectedGraph {
             }
 
         }
-
         recStackVisited[v] = false;
         return false;
-
     }
 
 
