@@ -1,0 +1,31 @@
+package com.grv.stack;
+
+import java.util.Stack;
+
+public class DailyTemperatures {
+
+    public int[] dailyTemperatures(int[] temperatures) {
+
+        int[] ans = new int[temperatures.length];
+        if (temperatures == null || temperatures.length == 0) return ans;
+
+        Stack<Integer> st = new Stack<>();
+
+        for (int i = temperatures.length-1; i >= 0; i--) {
+            while(!st.isEmpty() && temperatures[st.peek()] <= temperatures[i]) {
+         ß       st.pop();
+            }
+
+            if (st.isEmpty()) {
+                ans[i] = 0;
+            } else {
+                ans[i] = st.peek() - i;
+            }
+
+            st.push(i);
+        }
+
+        return ans;
+
+    }
+}

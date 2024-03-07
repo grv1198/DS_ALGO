@@ -2,7 +2,7 @@ package com.grv.systemdesignlowlevel.lrucache;
 
 public class DoublyLL {
 
-        private int data;
+        private int TextArrayWritable;
 
         private DoublyLL next;
 
