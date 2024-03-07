@@ -13,7 +13,7 @@ public class DailyTemperatures {
 
         for (int i = temperatures.length-1; i >= 0; i--) {
             while(!st.isEmpty() && temperatures[st.peek()] <= temperatures[i]) {
-         ß       st.pop();
+                st.pop();
             }
 
             if (st.isEmpty()) {
